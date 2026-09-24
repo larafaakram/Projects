@@ -19,6 +19,10 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+	<properties>
+		<sonar.organization>ciamsolution</sonar.organization>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -67,12 +71,21 @@
 			</plugin>
 		</plugins>
 	</build>
-<distributionManagement>
+<!--<distributionManagement>
     <repository>
         <id>central</id>
         <name>a0nymgefaiwwu-artifactory-primary-0-releases</name>
         <url>https://edshopdpt8.jfrog.io/artifactory/libs-release-local</url>
     </repository>
-</distributionManagement> 
+</distributionManagement>--> 
+
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>e53e9f1ebb8b-releases</name>
+        <url>http://172.20.0.9:8081/artifactory/libs-release-local</url>
+    </repository>
+</distributionManagement>
+
 
 </project>
