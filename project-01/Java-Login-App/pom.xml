@@ -16,11 +16,8 @@
 	<description>DPT DevOps project for Spring Boot</description>
 
 	<properties>
-		<java.version>1.8</java.version>
-	</properties>
-
-	<properties>
 		<sonar.organization>ciamsolution</sonar.organization>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
