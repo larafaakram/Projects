@@ -1,70 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 http://maven.apache.org/xsd/settings-1.2.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.2.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="
+            http://maven.apache.org/SETTINGS/1.2.0
+            https://maven.apache.org/xsd/settings-1.2.0.xsd">
 
+    <!-- Mirror the project's repository IDs to the lab Artifactory URLs.
+         Mirror IDs are also used to select the matching credentials below. -->
     <mirrors>
-      <mirror>
-        <id>jfrog-release-http</id>
-        <mirrorOf>central</mirrorOf>
-        <url>http://172.20.0.5:8081/artifactory/libs-release</url>
-      </mirror>
+        <mirror>
+            <id>jfrog-release-http</id>
+            <mirrorOf>central</mirrorOf>
+            <url>http://172.20.0.5:8081/artifactory/libs-release</url>
+        </mirror>
 
-      <mirror>
-        <id>jfrog-snapshot-http</id>
-        <mirrorOf>snapshots</mirrorOf>
-        <url>http://172.20.0.5:8081/artifactory/libs-snapshot</url>
-      </mirror>
+        <mirror>
+            <id>jfrog-snapshot-http</id>
+            <mirrorOf>snapshots</mirrorOf>
+            <url>http://172.20.0.5:8081/artifactory/libs-snapshot</url>
+        </mirror>
     </mirrors>
-  <servers>
-    <server>
-      <username>${env.JFROG_USER}</username>
-      <password>${env.JFROG_TOKEN}</password>
-      <id>central</id>
-    </server>
-    <server>
-      <username>${env.JFROG_USER}</username>
-      <password>${env.JFROG_TOKEN}</password>
-      <id>snapshots</id>
-    </server>
-  </servers>
-  <profiles>
-    <profile>
-      <repositories>
-        <repository>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <id>central</id>
-          <name>libs-release</name>
-          <url>http://172.20.0.5:8081/artifactory/libs-release</url>
-        </repository>
-        <repository>
-          <snapshots />
-          <id>snapshots</id>
-          <name>libs-snapshot</name>
-          <url>http://172.20.0.5:8081/artifactory/libs-snapshot</url>
-        </repository>
-      </repositories>
-      <pluginRepositories>
-        <pluginRepository>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <id>central</id>
-          <name>libs-release</name>
-          <url>http://172.20.0.5:8081/artifactory/libs-release</url>
-        </pluginRepository>
-        <pluginRepository>
-          <snapshots />
-          <id>snapshots</id>
-          <name>libs-snapshot</name>
-          <url>http://172.20.0.5:8081/artifactory/libs-snapshot</url>
-        </pluginRepository>
-      </pluginRepositories>
-      <id>artifactory</id>
-    </profile>
-  </profiles>
-  <activeProfiles>
-    <activeProfile>artifactory</activeProfile>
-  </activeProfiles>
+
+    <servers>
+        <server>
+            <id>jfrog-release-http</id>
+            <username>${env.JFROG_USER}</username>
+            <password>${env.JFROG_TOKEN}</password>
+        </server>
+
+        <server>
+            <id>jfrog-snapshot-http</id>
+            <username>${env.JFROG_USER}</username>
+            <password>${env.JFROG_TOKEN}</password>
+        </server>
+    </servers>
+
+    <profiles>
+        <profile>
+            <id>artifactory-lab</id>
+
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <name>Artifactory lab releases</name>
+                    <url>http://172.20.0.5:8081/artifactory/libs-release</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+
+                <repository>
+                    <id>snapshots</id>
+                    <name>Artifactory lab snapshots</name>
+                    <url>http://172.20.0.5:8081/artifactory/libs-snapshot</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <name>Artifactory lab plugin releases</name>
+                    <url>http://172.20.0.5:8081/artifactory/libs-release</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+
+                <pluginRepository>
+                    <id>snapshots</id>
+                    <name>Artifactory lab plugin snapshots</name>
+                    <url>http://172.20.0.5:8081/artifactory/libs-snapshot</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>artifactory-lab</activeProfile>
+    </activeProfiles>
+
 </settings>
