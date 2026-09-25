@@ -82,17 +82,13 @@
         <name>e53e9f1ebb8b-releases</name>
         <url>http://172.20.0.5:8081/artifactory/libs-release</url>
     </repository>
-</distributionManagement>
 
-<distributionManagement>
     <snapshotRepository>
         <id>snapshots</id>
         <name>e53e9f1ebb8b-snapshots</name>
         <url>http://172.20.0.5:8081/artifactory/libs-snapshot</url>
     </snapshotRepository>
-</distributionManagement>
 
-<distributionManagement>
     <repository>
         <id>central</id>
         <name>e53e9f1ebb8b-releases</name>
