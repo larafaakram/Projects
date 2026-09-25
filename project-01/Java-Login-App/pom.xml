@@ -89,11 +89,11 @@
         <url>http://172.20.0.5:8081/artifactory/libs-snapshot</url>
     </snapshotRepository>
 
-    <repository>
+    <!--<repository>
         <id>central</id>
         <name>e53e9f1ebb8b-releases</name>
         <url>http://172.20.0.5:8081/artifactory/libs-release-local</url>
-    </repository>
+    </repository>-->
 </distributionManagement>
 
 
