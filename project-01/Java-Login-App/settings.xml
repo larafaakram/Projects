@@ -23,13 +23,13 @@
 
     <servers>
         <server>
-            <id>jfrog-release-http</id>
+            <id>central</id>
             <username>${env.JFROG_USER}</username>
             <password>${env.JFROG_TOKEN}</password>
         </server>
 
         <server>
-            <id>jfrog-snapshot-http</id>
+            <id>snapshots</id>
             <username>${env.JFROG_USER}</username>
             <password>${env.JFROG_TOKEN}</password>
         </server>
