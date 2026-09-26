@@ -11,13 +11,13 @@
         <mirror>
             <id>jfrog-release-http</id>
             <mirrorOf>central</mirrorOf>
-            <url>http://172.20.0.5:8081/artifactory/libs-release</url>
+            <url>http://172.20.0.9:8081/artifactory/libs-release</url>
         </mirror>
 
         <mirror>
             <id>jfrog-snapshot-http</id>
             <mirrorOf>snapshots</mirrorOf>
-            <url>http://172.20.0.5:8081/artifactory/libs-snapshot</url>
+            <url>http://172.20.0.9:8081/artifactory/libs-snapshot</url>
         </mirror>
     </mirrors>
 
@@ -43,7 +43,7 @@
                 <repository>
                     <id>central</id>
                     <name>Artifactory lab releases</name>
-                    <url>http://172.20.0.5:8081/artifactory/libs-release</url>
+                    <url>http://172.20.0.9:8081/artifactory/libs-release</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -55,7 +55,7 @@
                 <repository>
                     <id>snapshots</id>
                     <name>Artifactory lab snapshots</name>
-                    <url>http://172.20.0.5:8081/artifactory/libs-snapshot</url>
+                    <url>http://172.20.0.9:8081/artifactory/libs-snapshot</url>
                     <releases>
                         <enabled>false</enabled>
                     </releases>
@@ -69,7 +69,7 @@
                 <pluginRepository>
                     <id>central</id>
                     <name>Artifactory lab plugin releases</name>
-                    <url>http://172.20.0.5:8081/artifactory/libs-release</url>
+                    <url>http://172.20.0.9:8081/artifactory/libs-release</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -81,7 +81,7 @@
                 <pluginRepository>
                     <id>snapshots</id>
                     <name>Artifactory lab plugin snapshots</name>
-                    <url>http://172.20.0.5:8081/artifactory/libs-snapshot</url>
+                    <url>http://172.20.0.9:8081/artifactory/libs-snapshot</url>
                     <releases>
                         <enabled>false</enabled>
                     </releases>
