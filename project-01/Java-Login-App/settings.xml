@@ -9,13 +9,13 @@
          Mirror IDs are also used to select the matching credentials below. -->
     <mirrors>
         <mirror>
-            <id>jfrog-release-http</id>
+            <id>central</id>
             <mirrorOf>central</mirrorOf>
             <url>http://172.20.0.3:8081/artifactory/libs-release-local</url>
         </mirror>
 
         <mirror>
-            <id>jfrog-snapshot-http</id>
+            <id>snapshots</id>
             <mirrorOf>snapshots</mirrorOf>
             <url>http://172.20.0.3:8081/artifactory/libs-snapshot-local</url>
         </mirror>
