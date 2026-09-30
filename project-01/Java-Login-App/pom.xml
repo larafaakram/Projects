@@ -69,13 +69,13 @@
 		<repository>
 			<id>central</id>
 			<name>e53e9f1ebb8b-releases</name>
-			<url>http://172.20.0.3:8081/artifactory/libs-release-local</url>
+			<url>http://172.20.0.2:8081/artifactory/libs-release-local</url>
 		</repository>
 
 		<snapshotRepository>
 			<id>snapshots</id>
 			<name>e53e9f1ebb8b-snapshots</name>
-			<url>http://172.20.0.3:8081/artifactory/libs-snapshot-local</url>
+			<url>http://172.20.0.2:8081/artifactory/libs-snapshot-local</url>
 		</snapshotRepository>
     </distributionManagement>
 
