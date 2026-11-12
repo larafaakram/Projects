@@ -10,13 +10,13 @@
     <mirrors>
         <mirror>
             <id>central</id>
-            <mirrorOf>central</mirrorOf>
+            <mirrorOf>*</mirrorOf>
             <url>http://172.20.0.12:8081/artifactory/libs-release-local</url>
         </mirror>
 
         <mirror>
             <id>snapshots</id>
-            <mirrorOf>snapshots</mirrorOf>
+            <mirrorOf>*</mirrorOf>
             <url>http://172.20.0.12:8081/artifactory/libs-snapshot-local</url>
         </mirror>
     </mirrors>
