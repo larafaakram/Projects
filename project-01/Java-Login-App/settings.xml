@@ -9,6 +9,11 @@
          Mirror IDs are also used to select the matching credentials below. -->
     <mirrors>
         <mirror>
+            <id>artifactory</id>
+            <mirrorOf>*</mirrorOf>
+            <url>http://172.20.0.14:8081/artifactory/maven-virtual</url>
+        </mirror>
+        <mirror>
             <id>central</id>
             <mirrorOf>*</mirrorOf>
             <url>http://172.20.0.14:8081/artifactory/libs-release-local</url>
