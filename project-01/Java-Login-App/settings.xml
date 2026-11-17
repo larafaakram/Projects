@@ -38,6 +38,11 @@
             <username>${env.JFROG_USER}</username>
             <password>${env.JFROG_TOKEN}</password>
         </server>
+        <server>
+            <id>artifactory</id>
+            <username>${env.JFROG_USER}</username>
+            <password>${env.JFROG_TOKEN}</password>
+    </server>
     </servers>
 
     <profiles>
