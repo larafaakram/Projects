@@ -13,6 +13,7 @@
             <mirrorOf>*</mirrorOf>
             <url>http://172.20.0.14:8081/artifactory/maven-virtual</url>
         </mirror>
+
         <mirror>
             <id>central</id>
             <mirrorOf>*</mirrorOf>
@@ -42,7 +43,7 @@
             <id>artifactory</id>
             <username>${env.JFROG_USER}</username>
             <password>${env.JFROG_TOKEN}</password>
-    </server>
+        </server>
     </servers>
 
     <profiles>
@@ -52,7 +53,7 @@
             <repositories>
                 <repository>
                     <id>central</id>
-                    <name>Artifactory lab releases</name>
+                    <name>eb349ec03dbd-releases</name>
                     <url>http://172.20.0.14:8081/artifactory/libs-release-local</url>
                     <releases>
                         <enabled>true</enabled>
@@ -64,7 +65,7 @@
 
                 <repository>
                     <id>snapshots</id>
-                    <name>Artifactory lab snapshots</name>
+                    <name>eb349ec03dbd-snapshots</name>
                     <url>http://172.20.0.14:8081/artifactory/libs-snapshot-local</url>
                     <releases>
                         <enabled>false</enabled>
@@ -78,7 +79,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>central</id>
-                    <name>Artifactory lab plugin releases</name>
+                    <name>eb349ec03dbd-releases</name>
                     <url>http://172.20.0.14:8081/artifactory/libs-release-local</url>
                     <releases>
                         <enabled>true</enabled>
@@ -90,7 +91,7 @@
 
                 <pluginRepository>
                     <id>snapshots</id>
-                    <name>Artifactory lab plugin snapshots</name>
+                    <name>eb349ec03dbd-snapshots</name>
                     <url>http://172.20.0.14:8081/artifactory/libs-snapshot-local</url>
                     <releases>
                         <enabled>false</enabled>
