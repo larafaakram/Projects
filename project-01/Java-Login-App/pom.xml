@@ -90,6 +90,16 @@
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>5.0.0.4389</version>
             </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                    <configuration>
+                        <url>http://localhost.floci.io:8081/manager/text</url>
+                        <server>TomcatServer</server>
+                        <path>/java-login-app</path>
+                    </configuration>
+            </plugin>
         </plugins>
     </build>
 

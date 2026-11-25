@@ -29,6 +29,12 @@
 
     <servers>
         <server>
+            <id>TomcatServer</id>
+            <username>${env.TOM_USER}</username>
+            <password>${env.TOM_TOKEN}</password>
+        </server>
+
+        <server>
             <id>central</id>
             <username>${env.JFROG_USER}</username>
             <password>${env.JFROG_TOKEN}</password>
