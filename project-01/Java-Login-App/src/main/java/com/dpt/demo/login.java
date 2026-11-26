@@ -6,7 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import javax.websocket.Session;
+//import javax.websocket.Session;
+import jakarta.websocket.Session;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
